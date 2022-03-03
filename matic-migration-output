@@ -8,113 +8,78 @@ Starting migrations...
 1_initial_migration.js
 ======================
 
-   Replacing 'Migrations'
+   Deploying 'Migrations'
    ----------------------
-   > transaction hash:    0x9687a538140389ad644992683df0a5f1f781f09cdab0ca849e15b2bdf23780e2
-   > Blocks: 4            Seconds: 9
-   > contract address:    0x02A67444204eE6b28C789F1d148843Cb43e9899e
-   > block number:        22790390
-   > block timestamp:     1639774128
-   > account:             0xDA50FF6D7e4C4D4458cc9DE70fA82045A525CA58
-   > balance:             4.654681835432580221
-   > gas used:            165679 (0x2872f)
-   > gas price:           25 gwei
+   > transaction hash:    0x5123f62f24d8c3ff4397fd98c24fdd5dd0607a6dae74a8f5a7a37fab36424d2d
+   > Blocks: 1            Seconds: 24
+   > contract address:    0x67Be77e9E205aCa64afdA323da7C36A083721Db3
+   > block number:        25365497
+   > block timestamp:     1646338238
+   > account:             0xCDB1c8BD7f31f6EfaeDe6B616d669561292D9Ea5
+   > balance:             1.128149498122059908
+   > gas used:            165691 (0x2873b)
+   > gas price:           1.500000013 gwei
    > value sent:          0 ETH
-   > total cost:          0.004141975 ETH
+   > total cost:          0.000248536502153983 ETH
 
    Pausing for 2 confirmations...
    ------------------------------
-   > confirmation number: 2 (block: 22790393)
+   > confirmation number: 2 (block: 25365499)
 
    > Saving migration to chain.
    > Saving artifacts
    -------------------------------------
-   > Total cost:         0.004141975 ETH
+   > Total cost:     0.000248536502153983 ETH
 
 
-2_deploy_otbswap_router.js
+2_deploy_swapify_router.js
 ==========================
 
-   Replacing 'WETH9'
+   Deploying 'WETH9'
    -----------------
-   > transaction hash:    0x295795ec8f34beba0b1cce81eb8c4add9cfb526efd6084717b360b3d6f9c87a9
-   > Blocks: 1            Seconds: 4
-   > contract address:    0xAC2e8a5ca21BdFb6dBeCF16eb5F18A2CF05e1A7f
-   > block number:        22790400
-   > block timestamp:     1639774152
-   > account:             0xDA50FF6D7e4C4D4458cc9DE70fA82045A525CA58
-   > balance:             4.631812210432580221
-   > gas used:            869044 (0xd42b4)
-   > gas price:           25 gwei
+   > transaction hash:    0x8761c9f72bd611b07f65ef1e04e903f6cea413c93b0c844ccd74ca4da293e8ab
+   > Blocks: 0            Seconds: 8
+   > contract address:    0xd632D8116d57b68acb82169DCEfE27e2fB52a8Ce
+   > block number:        25365501
+   > block timestamp:     1646338278
+   > account:             0xCDB1c8BD7f31f6EfaeDe6B616d669561292D9Ea5
+   > balance:             1.126777338610167859
+   > gas used:            869032 (0xd42a8)
+   > gas price:           1.500000013 gwei
    > value sent:          0 ETH
-   > total cost:          0.0217261 ETH
+   > total cost:          0.001303548011297416 ETH
 
    Pausing for 2 confirmations...
    ------------------------------
-   > confirmation number: 2 (block: 22790403)
+   > confirmation number: 1 (block: 25365502)
+   > confirmation number: 2 (block: 25365503)
 
-   Replacing 'Token1'
-   ------------------
-   > transaction hash:    0x0377d364cabd93e3b35000d795da04ef668349364956f20db4512f5e7403432b
-   > Blocks: 4            Seconds: 9
-   > contract address:    0xd2b643e4BD2b3F9BB28796d078E33698d7544FAe
-   > block number:        22790409
-   > block timestamp:     1639774170
-   > account:             0xDA50FF6D7e4C4D4458cc9DE70fA82045A525CA58
-   > balance:             4.596211270432580221
-   > gas used:            1186698 (0x121b8a)
-   > gas price:           30 gwei
-   > value sent:          0 ETH
-   > total cost:          0.03560094 ETH
-
-   Pausing for 2 confirmations...
-   ------------------------------
-   > confirmation number: 2 (block: 22790412)
-
-   Replacing 'Token2'
-   ------------------
-   > transaction hash:    0x49ba7a725d8d77b6b959a0e48947784f26cbf14e4a69203146087b7c97025128
-   > Blocks: 3            Seconds: 5
-   > contract address:    0x3F24D7852F446c9B1881203413d095844f606E02
-   > block number:        22790417
-   > block timestamp:     1639774186
-   > account:             0xDA50FF6D7e4C4D4458cc9DE70fA82045A525CA58
-   > balance:             4.560610690431393535
-   > gas used:            1186686 (0x121b7e)
-   > gas price:           30.000000001 gwei
-   > value sent:          0 ETH
-   > total cost:          0.035600580001186686 ETH
-
-   Pausing for 2 confirmations...
-   ------------------------------
-   > confirmation number: 3 (block: 22790420)
-
-   Replacing 'OTBSwapRouter'
+   Deploying 'SwapifyRouter'
    -------------------------
-   > transaction hash:    0x417bc30bee4c086471ed8b1b1fdf8f13cebc607afb187389c1646548ab2d3b3c
-   > Blocks: 2            Seconds: 5
-   > contract address:    0x3ee016BcE9000171Ee105537c5f589ad201bAbA6
-   > block number:        22790426
-   > block timestamp:     1639774204
-   > account:             0xDA50FF6D7e4C4D4458cc9DE70fA82045A525CA58
-   > balance:             4.411092610426409599
-   > gas used:            4983936 (0x4c0c80)
-   > gas price:           30.000000001 gwei
+   > transaction hash:    0x6d27882c60a5c1b005fb8e30b0cdcf4f7e8e935d36d30db7b1fbfd0b0bad097d
+   > Blocks: 1            Seconds: 8
+   > contract address:    0x33b5075d68c099C4BFb010D0dA9bC5f4Fd8c8959
+   > block number:        25365505
+   > block timestamp:     1646338309
+   > account:             0xCDB1c8BD7f31f6EfaeDe6B616d669561292D9Ea5
+   > balance:             1.120169438057304655
+   > gas used:            4405267 (0x433813)
+   > gas price:           1.500000012 gwei
    > value sent:          0 ETH
-   > total cost:          0.149518080004983936 ETH
+   > total cost:          0.006607900552863204 ETH
 
    Pausing for 2 confirmations...
    ------------------------------
-   > confirmation number: 2 (block: 22790428)
+   > confirmation number: 1 (block: 25365506)
+   > confirmation number: 2 (block: 25365507)
 
    > Saving migration to chain.
    > Saving artifacts
    -------------------------------------
-   > Total cost:     0.242445700006170622 ETH
+   > Total cost:     0.00791144856416062 ETH
 
 
 Summary
 =======
-> Total deployments:   5
-> Final cost:          0.246587675006170622 ETH
-
+> Total deployments:   3
+> Final cost:          0.008159985066314603 ETH

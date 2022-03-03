@@ -1,0 +1,1982 @@
+{
+  "contractName": "Permissible",
+  "abi": [
+    {
+      "inputs": [],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "previousOwner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "OwnershipTransferred",
+      "type": "event"
+    },
+    {
+      "inputs": [],
+      "name": "isOwner",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "renounceOwnership",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "transferOwnership",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "isPermissible",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_account",
+          "type": "address"
+        }
+      ],
+      "name": "addPermittedAccount",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_account",
+          "type": "address"
+        }
+      ],
+      "name": "removePermittedAccount",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.6.6+commit.6c089d02\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"previousOwner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"OwnershipTransferred\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_account\",\"type\":\"address\"}],\"name\":\"addPermittedAccount\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"isOwner\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"isPermissible\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_account\",\"type\":\"address\"}],\"name\":\"removePermittedAccount\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"renounceOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"transferOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{\"addPermittedAccount(address)\":{\"details\":\"Adds the address to the list of permitted accounts. Only external accounts should be added. Adding a contract address will not be permitted to do transaction.\"},\"isOwner()\":{\"details\":\"Returns true if the caller is the current owner.\"},\"isPermissible()\":{\"details\":\"Returns true if the caller is among the list of permitted accounts. Only allowed for external accounts.\"},\"owner()\":{\"details\":\"Returns the address of the current owner.\"},\"removePermittedAccount(address)\":{\"details\":\"Removes or deactivate the address from the list of permitted accounts.\"},\"renounceOwnership()\":{\"details\":\"Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner.      * > Note: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner.\"},\"transferOwnership(address)\":{\"details\":\"Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner.\"}}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"@swapify-official/swapify-core/contracts/Permissible.sol\":\"Permissible\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"@swapify-official/swapify-core/contracts/Ownable.sol\":{\"keccak256\":\"0x799246d71b66f291940f1d0c5b9f0c63704832e401efb88f21ecb1a5c9562635\",\"urls\":[\"bzz-raw://7fb6e2b3322243b0b9077f9d28a60d78c004142adb50280b77b155fcc3858260\",\"dweb:/ipfs/QmcpgGijaRNWKUmdjv7cZ27jKQpgy84mKFhz6hhJrHRufS\"]},\"@swapify-official/swapify-core/contracts/Permissible.sol\":{\"keccak256\":\"0x6fb51e58455f7aedad288cd6db89d35cc061aa0d75f52092d06040db2bd84e65\",\"urls\":[\"bzz-raw://48b49d2db866102c080275f2a432f5b3528c575e12a324b8eb981d9c96435400\",\"dweb:/ipfs/QmV5ZKYXb59Sv28sXKeA2HVjwzYfPfgJuE1LbHxA8NtQ93\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity >=0.5.16;\r\n\r\nimport './Ownable.sol';\r\n\r\ncontract Permissible is Ownable {\r\n    mapping(address => bool) private allowed_accounts;\r\n\r\n    constructor() internal {\r\n        allowed_accounts[owner()] = true;\r\n    }\r\n\r\n    /**\r\n     * @dev Throws if called by any account other than any of the Permissibles.\r\n     */\r\n    modifier onlyPermissible() {\r\n        require(isPermissible(), \"Permissible: caller is not in the list of Permissibles\");\r\n        _;\r\n    }\r\n    /**\r\n     * @dev Returns true if the caller is among the list of permitted accounts.\r\n     * Only allowed for external accounts.\r\n     */\r\n    function isPermissible() public view returns (bool) {\r\n        return allowed_accounts[msg.sender];\r\n    }\r\n    /**\r\n     * @dev Adds the address to the list of permitted accounts.\r\n     * Only external accounts should be added.\r\n     * Adding a contract address will not be permitted to do transaction.\r\n     */\r\n    function addPermittedAccount(address _account) public onlyOwner {\r\n        allowed_accounts[_account] = true;\r\n    }\r\n    /**\r\n     * @dev Removes or deactivate the address from the list of permitted accounts.\r\n     */\r\n    function removePermittedAccount(address _account) public onlyOwner {\r\n        allowed_accounts[_account] = false;\r\n    }\r\n}",
+  "sourcePath": "@swapify-official/swapify-core/contracts/Permissible.sol",
+  "ast": {
+    "absolutePath": "@swapify-official/swapify-core/contracts/Permissible.sol",
+    "exportedSymbols": {
+      "Permissible": [
+        8046
+      ]
+    },
+    "id": 8047,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 7974,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.5",
+          ".16"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:25:27"
+      },
+      {
+        "absolutePath": "@swapify-official/swapify-core/contracts/Ownable.sol",
+        "file": "./Ownable.sol",
+        "id": 7975,
+        "nodeType": "ImportDirective",
+        "scope": 8047,
+        "sourceUnit": 7973,
+        "src": "29:23:27",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 7976,
+              "name": "Ownable",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 7972,
+              "src": "80:7:27",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Ownable_$7972",
+                "typeString": "contract Ownable"
+              }
+            },
+            "id": 7977,
+            "nodeType": "InheritanceSpecifier",
+            "src": "80:7:27"
+          }
+        ],
+        "contractDependencies": [
+          7972
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 8046,
+        "linearizedBaseContracts": [
+          8046,
+          7972
+        ],
+        "name": "Permissible",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 7981,
+            "mutability": "mutable",
+            "name": "allowed_accounts",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 8046,
+            "src": "95:49:27",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
+              "typeString": "mapping(address => bool)"
+            },
+            "typeName": {
+              "id": 7980,
+              "keyType": {
+                "id": 7978,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "103:7:27",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "95:24:27",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
+                "typeString": "mapping(address => bool)"
+              },
+              "valueType": {
+                "id": 7979,
+                "name": "bool",
+                "nodeType": "ElementaryTypeName",
+                "src": "114:4:27",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "private"
+          },
+          {
+            "body": {
+              "id": 7991,
+              "nodeType": "Block",
+              "src": "176:51:27",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 7989,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 7984,
+                        "name": "allowed_accounts",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 7981,
+                        "src": "187:16:27",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
+                          "typeString": "mapping(address => bool)"
+                        }
+                      },
+                      "id": 7987,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "arguments": [],
+                        "expression": {
+                          "argumentTypes": [],
+                          "id": 7985,
+                          "name": "owner",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 7887,
+                          "src": "204:5:27",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_internal_view$__$returns$_t_address_$",
+                            "typeString": "function () view returns (address)"
+                          }
+                        },
+                        "id": 7986,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "204:7:27",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "187:25:27",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "74727565",
+                      "id": 7988,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "bool",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "215:4:27",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      },
+                      "value": "true"
+                    },
+                    "src": "187:32:27",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 7990,
+                  "nodeType": "ExpressionStatement",
+                  "src": "187:32:27"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 7992,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 7982,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "164:2:27"
+            },
+            "returnParameters": {
+              "id": 7983,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "176:0:27"
+            },
+            "scope": 8046,
+            "src": "153:74:27",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 8002,
+              "nodeType": "Block",
+              "src": "361:113:27",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "arguments": [],
+                        "expression": {
+                          "argumentTypes": [],
+                          "id": 7996,
+                          "name": "isPermissible",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 8015,
+                          "src": "380:13:27",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_internal_view$__$returns$_t_bool_$",
+                            "typeString": "function () view returns (bool)"
+                          }
+                        },
+                        "id": 7997,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "380:15:27",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "5065726d69737369626c653a2063616c6c6572206973206e6f7420696e20746865206c697374206f66205065726d69737369626c6573",
+                        "id": 7998,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "397:56:27",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_846595753c91b290413d8f9ebab2a5e38fd32a0cd448510a3f515d5b5b838e00",
+                          "typeString": "literal_string \"Permissible: caller is not in the list of Permissibles\""
+                        },
+                        "value": "Permissible: caller is not in the list of Permissibles"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_846595753c91b290413d8f9ebab2a5e38fd32a0cd448510a3f515d5b5b838e00",
+                          "typeString": "literal_string \"Permissible: caller is not in the list of Permissibles\""
+                        }
+                      ],
+                      "id": 7995,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        -18,
+                        -18
+                      ],
+                      "referencedDeclaration": -18,
+                      "src": "372:7:27",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 7999,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "372:82:27",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 8000,
+                  "nodeType": "ExpressionStatement",
+                  "src": "372:82:27"
+                },
+                {
+                  "id": 8001,
+                  "nodeType": "PlaceholderStatement",
+                  "src": "465:1:27"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 7993,
+              "nodeType": "StructuredDocumentation",
+              "src": "235:93:27",
+              "text": "@dev Throws if called by any account other than any of the Permissibles."
+            },
+            "id": 8003,
+            "name": "onlyPermissible",
+            "nodeType": "ModifierDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 7994,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "358:2:27"
+            },
+            "src": "334:140:27",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 8014,
+              "nodeType": "Block",
+              "src": "675:54:27",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "baseExpression": {
+                      "argumentTypes": null,
+                      "id": 8009,
+                      "name": "allowed_accounts",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 7981,
+                      "src": "693:16:27",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
+                        "typeString": "mapping(address => bool)"
+                      }
+                    },
+                    "id": 8012,
+                    "indexExpression": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 8010,
+                        "name": "msg",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": -15,
+                        "src": "710:3:27",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_magic_message",
+                          "typeString": "msg"
+                        }
+                      },
+                      "id": 8011,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "sender",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "710:10:27",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address_payable",
+                        "typeString": "address payable"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "693:28:27",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "functionReturnParameters": 8008,
+                  "id": 8013,
+                  "nodeType": "Return",
+                  "src": "686:35:27"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 8004,
+              "nodeType": "StructuredDocumentation",
+              "src": "480:137:27",
+              "text": "@dev Returns true if the caller is among the list of permitted accounts.\nOnly allowed for external accounts."
+            },
+            "functionSelector": "db7734fb",
+            "id": 8015,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isPermissible",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 8005,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "645:2:27"
+            },
+            "returnParameters": {
+              "id": 8008,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 8007,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 8015,
+                  "src": "669:4:27",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 8006,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "669:4:27",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "668:6:27"
+            },
+            "scope": 8046,
+            "src": "623:106:27",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 8029,
+              "nodeType": "Block",
+              "src": "1005:52:27",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 8027,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 8023,
+                        "name": "allowed_accounts",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 7981,
+                        "src": "1016:16:27",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
+                          "typeString": "mapping(address => bool)"
+                        }
+                      },
+                      "id": 8025,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 8024,
+                        "name": "_account",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 8018,
+                        "src": "1033:8:27",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "1016:26:27",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "74727565",
+                      "id": 8026,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "bool",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "1045:4:27",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      },
+                      "value": "true"
+                    },
+                    "src": "1016:33:27",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 8028,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1016:33:27"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 8016,
+              "nodeType": "StructuredDocumentation",
+              "src": "735:200:27",
+              "text": "@dev Adds the address to the list of permitted accounts.\nOnly external accounts should be added.\nAdding a contract address will not be permitted to do transaction."
+            },
+            "functionSelector": "f84817aa",
+            "id": 8030,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "arguments": null,
+                "id": 8021,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 8020,
+                  "name": "onlyOwner",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 7898,
+                  "src": "995:9:27",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$__$",
+                    "typeString": "modifier ()"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "995:9:27"
+              }
+            ],
+            "name": "addPermittedAccount",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 8019,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 8018,
+                  "mutability": "mutable",
+                  "name": "_account",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 8030,
+                  "src": "970:16:27",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 8017,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "970:7:27",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "969:18:27"
+            },
+            "returnParameters": {
+              "id": 8022,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1005:0:27"
+            },
+            "scope": 8046,
+            "src": "941:116:27",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 8044,
+              "nodeType": "Block",
+              "src": "1232:53:27",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 8042,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 8038,
+                        "name": "allowed_accounts",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 7981,
+                        "src": "1243:16:27",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
+                          "typeString": "mapping(address => bool)"
+                        }
+                      },
+                      "id": 8040,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 8039,
+                        "name": "_account",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 8033,
+                        "src": "1260:8:27",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "1243:26:27",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "66616c7365",
+                      "id": 8041,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "bool",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "1272:5:27",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      },
+                      "value": "false"
+                    },
+                    "src": "1243:34:27",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 8043,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1243:34:27"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 8031,
+              "nodeType": "StructuredDocumentation",
+              "src": "1063:96:27",
+              "text": "@dev Removes or deactivate the address from the list of permitted accounts."
+            },
+            "functionSelector": "61ebb58b",
+            "id": 8045,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "arguments": null,
+                "id": 8036,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 8035,
+                  "name": "onlyOwner",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 7898,
+                  "src": "1222:9:27",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$__$",
+                    "typeString": "modifier ()"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "1222:9:27"
+              }
+            ],
+            "name": "removePermittedAccount",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 8034,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 8033,
+                  "mutability": "mutable",
+                  "name": "_account",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 8045,
+                  "src": "1197:16:27",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 8032,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1197:7:27",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1196:18:27"
+            },
+            "returnParameters": {
+              "id": 8037,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1232:0:27"
+            },
+            "scope": 8046,
+            "src": "1165:120:27",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          }
+        ],
+        "scope": 8047,
+        "src": "56:1232:27"
+      }
+    ],
+    "src": "0:1288:27"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "@swapify-official/swapify-core/contracts/Permissible.sol",
+      "exportedSymbols": {
+        "Permissible": [
+          8046
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            ">=",
+            "0.5",
+            ".16"
+          ]
+        },
+        "id": 7974,
+        "name": "PragmaDirective",
+        "src": "0:25:27"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 7973,
+          "absolutePath": "@swapify-official/swapify-core/contracts/Ownable.sol",
+          "file": "./Ownable.sol",
+          "scope": 8047,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 7975,
+        "name": "ImportDirective",
+        "src": "29:23:27"
+      },
+      {
+        "attributes": {
+          "abstract": false,
+          "contractDependencies": [
+            7972
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            8046,
+            7972
+          ],
+          "name": "Permissible",
+          "scope": 8047
+        },
+        "children": [
+          {
+            "attributes": {
+              "arguments": null
+            },
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "Ownable",
+                  "referencedDeclaration": 7972,
+                  "type": "contract Ownable"
+                },
+                "id": 7976,
+                "name": "UserDefinedTypeName",
+                "src": "80:7:27"
+              }
+            ],
+            "id": 7977,
+            "name": "InheritanceSpecifier",
+            "src": "80:7:27"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "mutability": "mutable",
+              "name": "allowed_accounts",
+              "overrides": null,
+              "scope": 8046,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "mapping(address => bool)",
+              "value": null,
+              "visibility": "private"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "type": "mapping(address => bool)"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "address",
+                      "type": "address"
+                    },
+                    "id": 7978,
+                    "name": "ElementaryTypeName",
+                    "src": "103:7:27"
+                  },
+                  {
+                    "attributes": {
+                      "name": "bool",
+                      "type": "bool"
+                    },
+                    "id": 7979,
+                    "name": "ElementaryTypeName",
+                    "src": "114:4:27"
+                  }
+                ],
+                "id": 7980,
+                "name": "Mapping",
+                "src": "95:24:27"
+              }
+            ],
+            "id": 7981,
+            "name": "VariableDeclaration",
+            "src": "95:49:27"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": true,
+              "kind": "constructor",
+              "modifiers": [
+                null
+              ],
+              "name": "",
+              "overrides": null,
+              "scope": 8046,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 7982,
+                "name": "ParameterList",
+                "src": "164:2:27"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 7983,
+                "name": "ParameterList",
+                "src": "176:0:27"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "bool"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "type": "bool"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 7981,
+                                  "type": "mapping(address => bool)",
+                                  "value": "allowed_accounts"
+                                },
+                                "id": 7984,
+                                "name": "Identifier",
+                                "src": "187:16:27"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "arguments": [
+                                    null
+                                  ],
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "isStructConstructorCall": false,
+                                  "lValueRequested": false,
+                                  "names": [
+                                    null
+                                  ],
+                                  "tryCall": false,
+                                  "type": "address",
+                                  "type_conversion": false
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": [
+                                        null
+                                      ],
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 7887,
+                                      "type": "function () view returns (address)",
+                                      "value": "owner"
+                                    },
+                                    "id": 7985,
+                                    "name": "Identifier",
+                                    "src": "204:5:27"
+                                  }
+                                ],
+                                "id": 7986,
+                                "name": "FunctionCall",
+                                "src": "204:7:27"
+                              }
+                            ],
+                            "id": 7987,
+                            "name": "IndexAccess",
+                            "src": "187:25:27"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "hexvalue": "74727565",
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "subdenomination": null,
+                              "token": "bool",
+                              "type": "bool",
+                              "value": "true"
+                            },
+                            "id": 7988,
+                            "name": "Literal",
+                            "src": "215:4:27"
+                          }
+                        ],
+                        "id": 7989,
+                        "name": "Assignment",
+                        "src": "187:32:27"
+                      }
+                    ],
+                    "id": 7990,
+                    "name": "ExpressionStatement",
+                    "src": "187:32:27"
+                  }
+                ],
+                "id": 7991,
+                "name": "Block",
+                "src": "176:51:27"
+              }
+            ],
+            "id": 7992,
+            "name": "FunctionDefinition",
+            "src": "153:74:27"
+          },
+          {
+            "attributes": {
+              "name": "onlyPermissible",
+              "overrides": null,
+              "virtual": false,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": "@dev Throws if called by any account other than any of the Permissibles."
+                },
+                "id": 7993,
+                "name": "StructuredDocumentation",
+                "src": "235:93:27"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 7994,
+                "name": "ParameterList",
+                "src": "358:2:27"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "tryCall": false,
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_bool",
+                                  "typeString": "bool"
+                                },
+                                {
+                                  "typeIdentifier": "t_stringliteral_846595753c91b290413d8f9ebab2a5e38fd32a0cd448510a3f515d5b5b838e00",
+                                  "typeString": "literal_string \"Permissible: caller is not in the list of Permissibles\""
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                -18,
+                                -18
+                              ],
+                              "referencedDeclaration": -18,
+                              "type": "function (bool,string memory) pure",
+                              "value": "require"
+                            },
+                            "id": 7995,
+                            "name": "Identifier",
+                            "src": "372:7:27"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "arguments": [
+                                null
+                              ],
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "isStructConstructorCall": false,
+                              "lValueRequested": false,
+                              "names": [
+                                null
+                              ],
+                              "tryCall": false,
+                              "type": "bool",
+                              "type_conversion": false
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": [
+                                    null
+                                  ],
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 8015,
+                                  "type": "function () view returns (bool)",
+                                  "value": "isPermissible"
+                                },
+                                "id": 7996,
+                                "name": "Identifier",
+                                "src": "380:13:27"
+                              }
+                            ],
+                            "id": 7997,
+                            "name": "FunctionCall",
+                            "src": "380:15:27"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "hexvalue": "5065726d69737369626c653a2063616c6c6572206973206e6f7420696e20746865206c697374206f66205065726d69737369626c6573",
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "subdenomination": null,
+                              "token": "string",
+                              "type": "literal_string \"Permissible: caller is not in the list of Permissibles\"",
+                              "value": "Permissible: caller is not in the list of Permissibles"
+                            },
+                            "id": 7998,
+                            "name": "Literal",
+                            "src": "397:56:27"
+                          }
+                        ],
+                        "id": 7999,
+                        "name": "FunctionCall",
+                        "src": "372:82:27"
+                      }
+                    ],
+                    "id": 8000,
+                    "name": "ExpressionStatement",
+                    "src": "372:82:27"
+                  },
+                  {
+                    "id": 8001,
+                    "name": "PlaceholderStatement",
+                    "src": "465:1:27"
+                  }
+                ],
+                "id": 8002,
+                "name": "Block",
+                "src": "361:113:27"
+              }
+            ],
+            "id": 8003,
+            "name": "ModifierDefinition",
+            "src": "334:140:27"
+          },
+          {
+            "attributes": {
+              "functionSelector": "db7734fb",
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "isPermissible",
+              "overrides": null,
+              "scope": 8046,
+              "stateMutability": "view",
+              "virtual": false,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": "@dev Returns true if the caller is among the list of permitted accounts.\nOnly allowed for external accounts."
+                },
+                "id": 8004,
+                "name": "StructuredDocumentation",
+                "src": "480:137:27"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 8005,
+                "name": "ParameterList",
+                "src": "645:2:27"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "overrides": null,
+                      "scope": 8015,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bool",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bool",
+                          "type": "bool"
+                        },
+                        "id": 8006,
+                        "name": "ElementaryTypeName",
+                        "src": "669:4:27"
+                      }
+                    ],
+                    "id": 8007,
+                    "name": "VariableDeclaration",
+                    "src": "669:4:27"
+                  }
+                ],
+                "id": 8008,
+                "name": "ParameterList",
+                "src": "668:6:27"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 8008
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "type": "bool"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 7981,
+                              "type": "mapping(address => bool)",
+                              "value": "allowed_accounts"
+                            },
+                            "id": 8009,
+                            "name": "Identifier",
+                            "src": "693:16:27"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "sender",
+                              "referencedDeclaration": null,
+                              "type": "address payable"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": -15,
+                                  "type": "msg",
+                                  "value": "msg"
+                                },
+                                "id": 8010,
+                                "name": "Identifier",
+                                "src": "710:3:27"
+                              }
+                            ],
+                            "id": 8011,
+                            "name": "MemberAccess",
+                            "src": "710:10:27"
+                          }
+                        ],
+                        "id": 8012,
+                        "name": "IndexAccess",
+                        "src": "693:28:27"
+                      }
+                    ],
+                    "id": 8013,
+                    "name": "Return",
+                    "src": "686:35:27"
+                  }
+                ],
+                "id": 8014,
+                "name": "Block",
+                "src": "675:54:27"
+              }
+            ],
+            "id": 8015,
+            "name": "FunctionDefinition",
+            "src": "623:106:27"
+          },
+          {
+            "attributes": {
+              "functionSelector": "f84817aa",
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "name": "addPermittedAccount",
+              "overrides": null,
+              "scope": 8046,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": "@dev Adds the address to the list of permitted accounts.\nOnly external accounts should be added.\nAdding a contract address will not be permitted to do transaction."
+                },
+                "id": 8016,
+                "name": "StructuredDocumentation",
+                "src": "735:200:27"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "_account",
+                      "overrides": null,
+                      "scope": 8030,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 8017,
+                        "name": "ElementaryTypeName",
+                        "src": "970:7:27"
+                      }
+                    ],
+                    "id": 8018,
+                    "name": "VariableDeclaration",
+                    "src": "970:16:27"
+                  }
+                ],
+                "id": 8019,
+                "name": "ParameterList",
+                "src": "969:18:27"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 8022,
+                "name": "ParameterList",
+                "src": "1005:0:27"
+              },
+              {
+                "attributes": {
+                  "arguments": null
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "overloadedDeclarations": [
+                        null
+                      ],
+                      "referencedDeclaration": 7898,
+                      "type": "modifier ()",
+                      "value": "onlyOwner"
+                    },
+                    "id": 8020,
+                    "name": "Identifier",
+                    "src": "995:9:27"
+                  }
+                ],
+                "id": 8021,
+                "name": "ModifierInvocation",
+                "src": "995:9:27"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "bool"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "type": "bool"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 7981,
+                                  "type": "mapping(address => bool)",
+                                  "value": "allowed_accounts"
+                                },
+                                "id": 8023,
+                                "name": "Identifier",
+                                "src": "1016:16:27"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 8018,
+                                  "type": "address",
+                                  "value": "_account"
+                                },
+                                "id": 8024,
+                                "name": "Identifier",
+                                "src": "1033:8:27"
+                              }
+                            ],
+                            "id": 8025,
+                            "name": "IndexAccess",
+                            "src": "1016:26:27"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "hexvalue": "74727565",
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "subdenomination": null,
+                              "token": "bool",
+                              "type": "bool",
+                              "value": "true"
+                            },
+                            "id": 8026,
+                            "name": "Literal",
+                            "src": "1045:4:27"
+                          }
+                        ],
+                        "id": 8027,
+                        "name": "Assignment",
+                        "src": "1016:33:27"
+                      }
+                    ],
+                    "id": 8028,
+                    "name": "ExpressionStatement",
+                    "src": "1016:33:27"
+                  }
+                ],
+                "id": 8029,
+                "name": "Block",
+                "src": "1005:52:27"
+              }
+            ],
+            "id": 8030,
+            "name": "FunctionDefinition",
+            "src": "941:116:27"
+          },
+          {
+            "attributes": {
+              "functionSelector": "61ebb58b",
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "name": "removePermittedAccount",
+              "overrides": null,
+              "scope": 8046,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": "@dev Removes or deactivate the address from the list of permitted accounts."
+                },
+                "id": 8031,
+                "name": "StructuredDocumentation",
+                "src": "1063:96:27"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "_account",
+                      "overrides": null,
+                      "scope": 8045,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 8032,
+                        "name": "ElementaryTypeName",
+                        "src": "1197:7:27"
+                      }
+                    ],
+                    "id": 8033,
+                    "name": "VariableDeclaration",
+                    "src": "1197:16:27"
+                  }
+                ],
+                "id": 8034,
+                "name": "ParameterList",
+                "src": "1196:18:27"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 8037,
+                "name": "ParameterList",
+                "src": "1232:0:27"
+              },
+              {
+                "attributes": {
+                  "arguments": null
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "overloadedDeclarations": [
+                        null
+                      ],
+                      "referencedDeclaration": 7898,
+                      "type": "modifier ()",
+                      "value": "onlyOwner"
+                    },
+                    "id": 8035,
+                    "name": "Identifier",
+                    "src": "1222:9:27"
+                  }
+                ],
+                "id": 8036,
+                "name": "ModifierInvocation",
+                "src": "1222:9:27"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "bool"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "type": "bool"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 7981,
+                                  "type": "mapping(address => bool)",
+                                  "value": "allowed_accounts"
+                                },
+                                "id": 8038,
+                                "name": "Identifier",
+                                "src": "1243:16:27"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 8033,
+                                  "type": "address",
+                                  "value": "_account"
+                                },
+                                "id": 8039,
+                                "name": "Identifier",
+                                "src": "1260:8:27"
+                              }
+                            ],
+                            "id": 8040,
+                            "name": "IndexAccess",
+                            "src": "1243:26:27"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "hexvalue": "66616c7365",
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "subdenomination": null,
+                              "token": "bool",
+                              "type": "bool",
+                              "value": "false"
+                            },
+                            "id": 8041,
+                            "name": "Literal",
+                            "src": "1272:5:27"
+                          }
+                        ],
+                        "id": 8042,
+                        "name": "Assignment",
+                        "src": "1243:34:27"
+                      }
+                    ],
+                    "id": 8043,
+                    "name": "ExpressionStatement",
+                    "src": "1243:34:27"
+                  }
+                ],
+                "id": 8044,
+                "name": "Block",
+                "src": "1232:53:27"
+              }
+            ],
+            "id": 8045,
+            "name": "FunctionDefinition",
+            "src": "1165:120:27"
+          }
+        ],
+        "id": 8046,
+        "name": "ContractDefinition",
+        "src": "56:1232:27"
+      }
+    ],
+    "id": 8047,
+    "name": "SourceUnit",
+    "src": "0:1288:27"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.6.6+commit.6c089d02.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.1",
+  "updatedAt": "2022-03-03T20:10:28.216Z",
+  "devdoc": {
+    "methods": {
+      "addPermittedAccount(address)": {
+        "details": "Adds the address to the list of permitted accounts. Only external accounts should be added. Adding a contract address will not be permitted to do transaction."
+      },
+      "isOwner()": {
+        "details": "Returns true if the caller is the current owner."
+      },
+      "isPermissible()": {
+        "details": "Returns true if the caller is among the list of permitted accounts. Only allowed for external accounts."
+      },
+      "owner()": {
+        "details": "Returns the address of the current owner."
+      },
+      "removePermittedAccount(address)": {
+        "details": "Removes or deactivate the address from the list of permitted accounts."
+      },
+      "renounceOwnership()": {
+        "details": "Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner.      * > Note: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner."
+      },
+      "transferOwnership(address)": {
+        "details": "Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner."
+      }
+    }
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
