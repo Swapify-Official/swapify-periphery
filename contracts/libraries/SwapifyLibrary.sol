@@ -1,6 +1,6 @@
 pragma solidity >=0.5.0;
 
-import '@swapify-offical/swapify-core/contracts/interfaces/ISwapifyPair.sol';
+import '@swapify-official/swapify-core/contracts/interfaces/ISwapifyPair.sol';
 
 import "./SafeMath.sol";
 

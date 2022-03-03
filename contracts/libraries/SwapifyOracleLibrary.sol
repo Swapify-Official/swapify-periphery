@@ -1,6 +1,6 @@
 pragma solidity >=0.5.0;
 
-import '@swapify-offical/swapify-core/contracts/interfaces/ISwapifyPair.sol';
+import '@swapify-official/swapify-core/contracts/interfaces/ISwapifyPair.sol';
 import '@uniswap/lib/contracts/libraries/FixedPoint.sol';
 
 // library with helper methods for oracles that are concerned with computing average prices

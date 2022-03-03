@@ -1,11 +1,11 @@
 {
   "name": "@swapify-official/swapify-periphery",
-  "version": "0.0.8",
+  "version": "1.0.0",
   "description": "Peripheral smart contracts for interacting with Swapify",
-  "homepage": "https://github.com/Swapify-Official/Swapify-Periphery#readme",
+  "homepage": "https://github.com/Swapify-Official/swapify-periphery#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Swapify-Official/Swapify-Periphery.git"
+    "url": "git+https://github.com/Swapify-Official/swapify-periphery.git"
   },
   "keywords": [
     "swapify-periphery"
@@ -19,10 +19,10 @@
     "contracts"
   ],
   "publishConfig": {
-    "registry": "http://registry.npmjs.org"
+    "registry": "https://registry.npmjs.org"
   },
   "dependencies": {
-    "@otbswap/otbswap-core": "^0.0.8",
+    "@swapify-official/swapify-core": "^0.0.8",
     "@truffle/hdwallet-provider": "^1.5.1",
     "@uniswap/lib": "1.1.1",
     "@uniswap/v2-core": "^1.0.1",
@@ -54,7 +54,6 @@
     "compile": "waffle .waffle.json",
     "postcompile": "yarn copy-v1-artifacts",
     "pretest": "yarn compile",
-    "test": "mocha",
-    "prepublishOnly": "yarn test"
+    "test": "mocha"
   }
 }
