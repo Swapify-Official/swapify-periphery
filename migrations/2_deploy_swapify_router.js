@@ -25,12 +25,11 @@ module.exports = async function(deployer, network) {
     )
   } else {
     await deployer.deploy(WETH)
+    /*
     const weth = await WETH.deployed()
-    wethAddress = weth.address
+    wethAddress = weth.address */
 
-    await deployer.deploy(SwapifyRouter, FACTORY_ADDRESS, wethAddress)
+    await deployer.deploy(SwapifyRouter, FACTORY_ADDRESS, '0xd632D8116d57b68acb82169DCEfE27e2fB52a8Ce')
     const router = await SwapifyRouter.deployed()
-
-
   }
 }
