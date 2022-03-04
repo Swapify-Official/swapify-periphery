@@ -1,6 +1,7 @@
 pragma solidity =0.6.6;
 
 import '@swapify-official/swapify-core/contracts/interfaces/ISwapifyFactory.sol';
+import '@swapify-official/swapify-lottery/contracts/interfaces/ISwapifyLotterySystem.sol';
 import '@uniswap/lib/contracts/libraries/TransferHelper.sol';
 
 import './interfaces/ISwapifyRouter02.sol';
@@ -14,15 +15,17 @@ contract SwapifyRouter is ISwapifyRouter02 {
 
     address public immutable override factory;
     address public immutable override WETH;
+    address public immutable override lottery;
 
     modifier ensure(uint256 deadline) {
         require(deadline >= block.timestamp, 'SwapifyRouter: EXPIRED');
         _;
     }
 
-    constructor(address _factory, address _WETH) public {
+    constructor(address _factory, address _WETH, address _lottery) public {
         factory = _factory;
         WETH = _WETH;
+        lottery = _lottery;
     }
 
     receive() external payable {
@@ -236,6 +239,7 @@ contract SwapifyRouter is ISwapifyRouter02 {
             SwapifyLibrary.pairFor(factory, path[0], path[1]),
             amounts[0]
         );
+        ISwapifyLotterySystem(lottery).mintTickets(to, 1);
         _swap(amounts, path, to);
     }
 
@@ -254,6 +258,7 @@ contract SwapifyRouter is ISwapifyRouter02 {
             SwapifyLibrary.pairFor(factory, path[0], path[1]),
             amounts[0]
         );
+        ISwapifyLotterySystem(lottery).mintTickets(to, 1);
         _swap(amounts, path, to);
     }
 
@@ -268,6 +273,7 @@ contract SwapifyRouter is ISwapifyRouter02 {
         require(amounts[amounts.length - 1] >= amountOutMin, 'SwapifyRouter: INSUFFICIENT_OUTPUT_AMOUNT');
         IWETH(WETH).deposit{value: amounts[0]}();
         assert(IWETH(WETH).transfer(SwapifyLibrary.pairFor(factory, path[0], path[1]), amounts[0]));
+        ISwapifyLotterySystem(lottery).mintTickets(to, 1);
         _swap(amounts, path, to);
     }
 
@@ -287,6 +293,7 @@ contract SwapifyRouter is ISwapifyRouter02 {
             SwapifyLibrary.pairFor(factory, path[0], path[1]),
             amounts[0]
         );
+        ISwapifyLotterySystem(lottery).mintTickets(to, 1);
         _swap(amounts, path, address(this));
         IWETH(WETH).withdraw(amounts[amounts.length - 1]);
         TransferHelper.safeTransferETH(to, amounts[amounts.length - 1]);
@@ -311,6 +318,7 @@ contract SwapifyRouter is ISwapifyRouter02 {
         _swap(amounts, path, address(this));
         IWETH(WETH).withdraw(amounts[amounts.length - 1]);
         TransferHelper.safeTransferETH(to, amounts[amounts.length - 1]);
+        ISwapifyLotterySystem(lottery).mintTickets(to, 1);
     }
 
     function swapETHForExactTokens(
@@ -327,6 +335,7 @@ contract SwapifyRouter is ISwapifyRouter02 {
         _swap(amounts, path, to);
         // refund dust eth, if any
         if (msg.value > amounts[0]) TransferHelper.safeTransferETH(msg.sender, msg.value - amounts[0]);
+        ISwapifyLotterySystem(lottery).mintTickets(to, 1);
     }
 
     // **** SWAP (supporting fee-on-transfer tokens) ****
