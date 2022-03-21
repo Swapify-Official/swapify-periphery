@@ -1,7 +1,7 @@
 pragma solidity =0.6.6;
 
 import '@swapify-official/swapify-core/contracts/interfaces/ISwapifyFactory.sol';
-import '@swapify-official/swapify-lottery/contracts/interfaces/ISwapifyLotterySystem.sol';
+import './interfaces/ISwapifyLotterySystem.sol';
 import '@uniswap/lib/contracts/libraries/TransferHelper.sol';
 
 import './interfaces/ISwapifyRouter02.sol';
@@ -15,7 +15,7 @@ contract SwapifyRouter is ISwapifyRouter02 {
 
     address public immutable override factory;
     address public immutable override WETH;
-    address public immutable override lottery;
+    address public immutable lottery;
 
     modifier ensure(uint256 deadline) {
         require(deadline >= block.timestamp, 'SwapifyRouter: EXPIRED');

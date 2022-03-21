@@ -1,54 +1,53 @@
 {
-  "contractName": "IUniswapV1Factory",
+  "contractName": "ISwapifyLotterySystem",
   "abi": [
     {
       "inputs": [
         {
           "internalType": "address",
-          "name": "",
+          "name": "user",
           "type": "address"
-        }
-      ],
-      "name": "getExchange",
-      "outputs": [
+        },
         {
-          "internalType": "address",
-          "name": "",
-          "type": "address"
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
         }
       ],
-      "stateMutability": "view",
+      "name": "mintTickets",
+      "outputs": [],
+      "stateMutability": "nonpayable",
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.6.6+commit.6c089d02\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"getExchange\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/GitHub/Swapify-Periphery/contracts/interfaces/V1/IUniswapV1Factory.sol\":\"IUniswapV1Factory\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/GitHub/Swapify-Periphery/contracts/interfaces/V1/IUniswapV1Factory.sol\":{\"keccak256\":\"0xd080dfffb732df63f67e27c61766ca0c721df16ab5536bc69aa23d10e48c7770\",\"urls\":[\"bzz-raw://fb8114210bdd417e5cc82269377fe3cf41bc55ca3fe86f309fb6f0aef49f6750\",\"dweb:/ipfs/QmZjH7kS4YMiogfbzW9MqdQrcdiZCFUQWRuJ8CJK9NTSJ5\"]}},\"version\":1}",
+  "metadata": "{\"compiler\":{\"version\":\"0.6.6+commit.6c089d02\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"user\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"mintTickets\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/GitHub/Swapify-Periphery/contracts/interfaces/ISwapifyLotterySystem.sol\":\"ISwapifyLotterySystem\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/GitHub/Swapify-Periphery/contracts/interfaces/ISwapifyLotterySystem.sol\":{\"keccak256\":\"0x14073f76037b7dc168b88dd7adeb1ea3b045436c8efda75a1947b314e44c574e\",\"urls\":[\"bzz-raw://f461c92b3e41cfe7c5c06b4454337fb396161b6d3a88f2b628f9b3e00a61f5fa\",\"dweb:/ipfs/QmPbykkCEKPyTYGqZy1rxMAE2tQJMHthzKcJcJ8p8XPCpn\"]}},\"version\":1}",
   "bytecode": "0x",
   "deployedBytecode": "0x",
   "immutableReferences": {},
   "sourceMap": "",
   "deployedSourceMap": "",
-  "source": "pragma solidity >=0.5.0;\r\n\r\ninterface IUniswapV1Factory {\r\n    function getExchange(address) external view returns (address);\r\n}\r\n",
-  "sourcePath": "C:/GitHub/Swapify-Periphery/contracts/interfaces/V1/IUniswapV1Factory.sol",
+  "source": "pragma solidity >=0.6.6;\r\n\r\ninterface ISwapifyLotterySystem {\r\n    function mintTickets(address user, uint amount) external;\r\n}",
+  "sourcePath": "C:/GitHub/Swapify-Periphery/contracts/interfaces/ISwapifyLotterySystem.sol",
   "ast": {
-    "absolutePath": "/C/GitHub/Swapify-Periphery/contracts/interfaces/V1/IUniswapV1Factory.sol",
+    "absolutePath": "/C/GitHub/Swapify-Periphery/contracts/interfaces/ISwapifyLotterySystem.sol",
     "exportedSymbols": {
-      "IUniswapV1Factory": [
-        705
+      "ISwapifyLotterySystem": [
+        289
       ]
     },
-    "id": 706,
+    "id": 290,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 697,
+        "id": 281,
         "literals": [
           "solidity",
           ">=",
-          "0.5",
-          ".0"
+          "0.6",
+          ".6"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:24:9"
+        "src": "0:24:3"
       },
       {
         "abstract": false,
@@ -57,37 +56,37 @@
         "contractKind": "interface",
         "documentation": null,
         "fullyImplemented": false,
-        "id": 705,
+        "id": 289,
         "linearizedBaseContracts": [
-          705
+          289
         ],
-        "name": "IUniswapV1Factory",
+        "name": "ISwapifyLotterySystem",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "body": null,
             "documentation": null,
-            "functionSelector": "06f2bf62",
-            "id": 704,
+            "functionSelector": "dd20c4a7",
+            "id": 288,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
-            "name": "getExchange",
+            "name": "mintTickets",
             "nodeType": "FunctionDefinition",
             "overrides": null,
             "parameters": {
-              "id": 700,
+              "id": 286,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 699,
+                  "id": 283,
                   "mutability": "mutable",
-                  "name": "",
+                  "name": "user",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 704,
-                  "src": "84:7:9",
+                  "scope": 288,
+                  "src": "88:12:3",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -95,10 +94,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 698,
+                    "id": 282,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "84:7:9",
+                    "src": "88:7:3",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -107,65 +106,63 @@
                   },
                   "value": null,
                   "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 285,
+                  "mutability": "mutable",
+                  "name": "amount",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 288,
+                  "src": "102:11:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 284,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "102:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
                 }
               ],
-              "src": "83:9:9"
+              "src": "87:27:3"
             },
             "returnParameters": {
-              "id": 703,
+              "id": 287,
               "nodeType": "ParameterList",
-              "parameters": [
-                {
-                  "constant": false,
-                  "id": 702,
-                  "mutability": "mutable",
-                  "name": "",
-                  "nodeType": "VariableDeclaration",
-                  "overrides": null,
-                  "scope": 704,
-                  "src": "116:7:9",
-                  "stateVariable": false,
-                  "storageLocation": "default",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_address",
-                    "typeString": "address"
-                  },
-                  "typeName": {
-                    "id": 701,
-                    "name": "address",
-                    "nodeType": "ElementaryTypeName",
-                    "src": "116:7:9",
-                    "stateMutability": "nonpayable",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_address",
-                      "typeString": "address"
-                    }
-                  },
-                  "value": null,
-                  "visibility": "internal"
-                }
-              ],
-              "src": "115:9:9"
+              "parameters": [],
+              "src": "123:0:3"
             },
-            "scope": 705,
-            "src": "63:62:9",
-            "stateMutability": "view",
+            "scope": 289,
+            "src": "67:57:3",
+            "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
           }
         ],
-        "scope": 706,
-        "src": "28:100:9"
+        "scope": 290,
+        "src": "28:99:3"
       }
     ],
-    "src": "0:130:9"
+    "src": "0:127:3"
   },
   "legacyAST": {
     "attributes": {
-      "absolutePath": "/C/GitHub/Swapify-Periphery/contracts/interfaces/V1/IUniswapV1Factory.sol",
+      "absolutePath": "/C/GitHub/Swapify-Periphery/contracts/interfaces/ISwapifyLotterySystem.sol",
       "exportedSymbols": {
-        "IUniswapV1Factory": [
-          705
+        "ISwapifyLotterySystem": [
+          289
         ]
       }
     },
@@ -175,13 +172,13 @@
           "literals": [
             "solidity",
             ">=",
-            "0.5",
-            ".0"
+            "0.6",
+            ".6"
           ]
         },
-        "id": 697,
+        "id": 281,
         "name": "PragmaDirective",
-        "src": "0:24:9"
+        "src": "0:24:3"
       },
       {
         "attributes": {
@@ -196,27 +193,27 @@
           "documentation": null,
           "fullyImplemented": false,
           "linearizedBaseContracts": [
-            705
+            289
           ],
-          "name": "IUniswapV1Factory",
-          "scope": 706
+          "name": "ISwapifyLotterySystem",
+          "scope": 290
         },
         "children": [
           {
             "attributes": {
               "body": null,
               "documentation": null,
-              "functionSelector": "06f2bf62",
+              "functionSelector": "dd20c4a7",
               "implemented": false,
               "isConstructor": false,
               "kind": "function",
               "modifiers": [
                 null
               ],
-              "name": "getExchange",
+              "name": "mintTickets",
               "overrides": null,
-              "scope": 705,
-              "stateMutability": "view",
+              "scope": 289,
+              "stateMutability": "nonpayable",
               "virtual": false,
               "visibility": "external"
             },
@@ -227,9 +224,9 @@
                     "attributes": {
                       "constant": false,
                       "mutability": "mutable",
-                      "name": "",
+                      "name": "user",
                       "overrides": null,
-                      "scope": 704,
+                      "scope": 288,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "address",
@@ -243,70 +240,73 @@
                           "stateMutability": "nonpayable",
                           "type": "address"
                         },
-                        "id": 698,
+                        "id": 282,
                         "name": "ElementaryTypeName",
-                        "src": "84:7:9"
+                        "src": "88:7:3"
                       }
                     ],
-                    "id": 699,
+                    "id": 283,
                     "name": "VariableDeclaration",
-                    "src": "84:7:9"
-                  }
-                ],
-                "id": 700,
-                "name": "ParameterList",
-                "src": "83:9:9"
-              },
-              {
-                "children": [
+                    "src": "88:12:3"
+                  },
                   {
                     "attributes": {
                       "constant": false,
                       "mutability": "mutable",
-                      "name": "",
+                      "name": "amount",
                       "overrides": null,
-                      "scope": 704,
+                      "scope": 288,
                       "stateVariable": false,
                       "storageLocation": "default",
-                      "type": "address",
+                      "type": "uint256",
                       "value": null,
                       "visibility": "internal"
                     },
                     "children": [
                       {
                         "attributes": {
-                          "name": "address",
-                          "stateMutability": "nonpayable",
-                          "type": "address"
+                          "name": "uint",
+                          "type": "uint256"
                         },
-                        "id": 701,
+                        "id": 284,
                         "name": "ElementaryTypeName",
-                        "src": "116:7:9"
+                        "src": "102:4:3"
                       }
                     ],
-                    "id": 702,
+                    "id": 285,
                     "name": "VariableDeclaration",
-                    "src": "116:7:9"
+                    "src": "102:11:3"
                   }
                 ],
-                "id": 703,
+                "id": 286,
                 "name": "ParameterList",
-                "src": "115:9:9"
+                "src": "87:27:3"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 287,
+                "name": "ParameterList",
+                "src": "123:0:3"
               }
             ],
-            "id": 704,
+            "id": 288,
             "name": "FunctionDefinition",
-            "src": "63:62:9"
+            "src": "67:57:3"
           }
         ],
-        "id": 705,
+        "id": 289,
         "name": "ContractDefinition",
-        "src": "28:100:9"
+        "src": "28:99:3"
       }
     ],
-    "id": 706,
+    "id": 290,
     "name": "SourceUnit",
-    "src": "0:130:9"
+    "src": "0:127:3"
   },
   "compiler": {
     "name": "solc",
@@ -314,7 +314,7 @@
   },
   "networks": {},
   "schemaVersion": "3.4.1",
-  "updatedAt": "2022-03-21T22:07:34.353Z",
+  "updatedAt": "2022-03-21T22:07:34.338Z",
   "devdoc": {
     "methods": {}
   },

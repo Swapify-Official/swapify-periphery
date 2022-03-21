@@ -7,8 +7,8 @@ import '../libraries/SafeMath.sol';
 contract Token2 {
     using SafeMath for uint;
 
-    string public constant name = 'TOKEN TEST Token 2';
-    string public constant symbol = 'TOKEN2';
+    string public constant name = 'DAI Test';
+    string public constant symbol = 'DAI';
     uint8 public constant decimals = 18;
     uint public totalSupply;
     mapping(address => uint) public balanceOf;
